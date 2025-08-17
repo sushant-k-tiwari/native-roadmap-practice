@@ -2,20 +2,10 @@ import { Link } from "expo-router";
 import { View } from "react-native";
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <View className="flex-1 justify-center items-center">
       <Link
         href="./animations/FirstAnimation"
-        style={{
-          fontSize: 24,
-          color: "#0891b2",
-          fontWeight: "semibold",
-        }}
+        className=" font-semibold text-2xl text-[#0891b2]"
       >
         First Animation
       </Link>

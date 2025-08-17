@@ -14,39 +14,19 @@ const FirstAnimation = () => {
   };
 
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <View className="flex-1 justify-center items-center">
       <Animated.View
         style={{
           height,
           width,
-          backgroundColor: "#fca5a5",
         }}
+        className="bg-[#fca5a5]"
       />
       <TouchableOpacity
-        style={{
-          position: "absolute",
-          bottom: 100,
-          backgroundColor: "#0891b2",
-          padding: 12,
-          borderRadius: 8,
-        }}
+        className="absolute bottom-24 bg-[#0891b2] py-2 px-4 rounded-md"
         onPress={handlePress}
       >
-        <Text
-          style={{
-            color: "#fff",
-            fontWeight: "bold",
-            fontSize: 16,
-          }}
-        >
-          Expand
-        </Text>
+        <Text className="text-white font-semibold text-2xl">Expand</Text>
       </TouchableOpacity>
     </View>
   );
