@@ -16,13 +16,14 @@ const Layout = () => {
           elevation: 8,
           width: 300,
         },
-        drawerActiveTintColor: theme.colors.primary,
-        drawerInactiveTintColor: theme.colors.text,
-        drawerActiveBackgroundColor: theme.colors.border,
+        drawerActiveTintColor: "#0084d1",
+        drawerInactiveTintColor: "#a1a1a1",
+        drawerActiveBackgroundColor: "#b8e6fe",
         drawerLabelStyle: {
           fontSize: 16,
           fontWeight: "800",
         },
+        
       }}
     />
   );

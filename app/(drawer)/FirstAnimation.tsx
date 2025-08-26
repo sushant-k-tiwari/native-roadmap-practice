@@ -23,7 +23,7 @@ const FirstAnimation = () => {
         className="bg-[#fca5a5]"
       />
       <TouchableOpacity
-        className="absolute bottom-24 bg-[#64d3ee] py-2 px-4 rounded-md"
+        className="absolute bottom-24 bg-[#74d4ff] py-2 px-4 rounded-md"
         onPress={handlePress}
       >
         <Text className="text-white font-semibold text-2xl">Expand</Text>
