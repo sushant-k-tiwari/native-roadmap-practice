@@ -25,7 +25,11 @@ const Layout = () => {
         },
         
       }}
-    />
+    >
+      <Drawer.Screen name="FirstAnimation" />
+      <Drawer.Screen name="SecondAnimation" />
+      <Drawer.Screen name="ThirdAnimation" />
+    </Drawer>
   );
 };
 
