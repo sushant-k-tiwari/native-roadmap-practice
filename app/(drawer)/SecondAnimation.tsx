@@ -1,73 +1,60 @@
-import { Ionicons } from "@expo/vector-icons";
-import { Accordion, useTheme } from "heroui-native";
+import React from "react";
 import { Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function AccordionExample() {
-  const { colors } = useTheme();
-
-  const accordionData = [
-    {
-      id: "1",
-      title: "How do I place an order?",
-      icon: (
-        <Ionicons name="bag-outline" size={16} color={colors.mutedForeground} />
-      ),
-      content:
-        "Lorem ipsum dolor sit amet consectetur. Netus nunc mauris risus consequat. Libero placerat dignissim consectetur nisl.",
-    },
-    {
-      id: "2",
-      title: "What payment methods do you accept?",
-      icon: (
-        <Ionicons
-          name="card-outline"
-          size={16}
-          color={colors.mutedForeground}
-        />
-      ),
-      content:
-        "Lorem ipsum dolor sit amet consectetur. Netus nunc mauris risus consequat. Libero placerat dignissim consectetur nisl.",
-    },
-    {
-      id: "3",
-      title: "How much does shipping cost?",
-      icon: (
-        <Ionicons
-          name="cube-outline"
-          size={16}
-          color={colors.mutedForeground}
-        />
-      ),
-      content:
-        "Lorem ipsum dolor sit amet consectetur. Netus nunc mauris risus consequat. Libero placerat dignissim consectetur nisl.",
-    },
-  ];
-
+function Card({ children }: React.PropsWithChildren) {
   return (
-    <Accordion
-      selectionMode="single"
-      variant="border"
-      defaultValue="2"
-      className="m-3 border-neutral-400 rounded-md p-4 border-[0.5px] bg-sky-50"
-    >
-      {accordionData.map((item) => (
-        <Accordion.Item key={item.id} value={item.id}>
-          <Accordion.Trigger>
-            <View className="flex-row items-center flex-1 gap-3">
-              {item.icon}
-              <Text className="text-foreground text-base flex-1">
-                {item.title}
-              </Text>
-            </View>
-            <Accordion.Indicator />
-          </Accordion.Trigger>
-          <Accordion.Content>
-            <Text className="text-muted-foreground text-base/relaxed px-[25px]">
-              {item.content}
-            </Text>
-          </Accordion.Content>
-        </Accordion.Item>
-      ))}
-    </Accordion>
+    <View className="border-1 border-[#ccc] rounded-md p-12 m-8 bg-neutral-100 shadow-black shadow-md elevation-3 ">
+      {children}
+    </View>
   );
 }
+
+function CardHeader({ children }: React.PropsWithChildren) {
+  return (
+    <View className="mb-8">
+      <Text className="text-lg font-bold">{children}</Text>
+    </View>
+  );
+}
+
+function CardBody({ children }: React.PropsWithChildren) {
+  return (
+    <View className="mb-8">
+      <Text className="text-md text-neutral-400 flex-wrap">{children}</Text>
+    </View>
+  );
+}
+
+function CardFooter({ children }: React.PropsWithChildren) {
+  return (
+    <View className="mb-8 items-start absolute bottom-0 left-12">
+      <Text className="text-sm text-[#666]"> {children} </Text>
+    </View>
+  );
+}
+const SecondAnimation = () => {
+  return (
+    <SafeAreaView>
+      <Card>
+        <CardHeader>Demo Card</CardHeader>
+        <CardBody>
+          This is a demo card created for the purpose of learning compound
+          components. Now i am just testing this.
+        </CardBody>
+        <CardFooter>© 2025 Sushant Learning</CardFooter>
+      </Card>
+
+      <Card>
+        <CardHeader>Second Card</CardHeader>
+        <CardBody>
+          This is a demo card created for the purpose of learning compound
+          components. Now i am just testing this.
+        </CardBody>
+        <CardFooter>© 2025 Sushant Learning</CardFooter>
+      </Card>
+    </SafeAreaView>
+  );
+};
+
+export default SecondAnimation;
