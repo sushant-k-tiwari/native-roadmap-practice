@@ -94,7 +94,7 @@ Card.Body = CardBody;
 Card.Footer = CardFooter;
 Card.ThemeToggle = CardThemeToggle;
 
-const ThirdAnimation = () => {
+const ThemeCard = () => {
   return (
     <SafeAreaView className="flex-1 bg-gray-100 p-4">
       <Card defaultTheme="light">
@@ -105,7 +105,7 @@ const ThirdAnimation = () => {
           components to learn and practice the concepts of Context API.
         </Card.Body>
         <Card.Body>
-          Check out the code in the app/(drawer)/ThirdAnimation.tsx
+          Check out the code in the app/(drawer)/ThemeCard.tsx
         </Card.Body>
         <Card.Footer>© 2025 Sushant Learning</Card.Footer>
       </Card>
@@ -113,4 +113,4 @@ const ThirdAnimation = () => {
   );
 };
 
-export default ThirdAnimation;
+export default ThemeCard;

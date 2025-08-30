@@ -33,7 +33,7 @@ function CardFooter({ children }: React.PropsWithChildren) {
     </View>
   );
 }
-const SecondAnimation = () => {
+const SimpleCard = () => {
   return (
     <SafeAreaView>
       <Card>
@@ -57,4 +57,4 @@ const SecondAnimation = () => {
   );
 };
 
-export default SecondAnimation;
+export default SimpleCard;

@@ -23,12 +23,10 @@ const Layout = () => {
           fontSize: 16,
           fontWeight: "800",
         },
-        
       }}
     >
-      <Drawer.Screen name="FirstAnimation" />
-      <Drawer.Screen name="SecondAnimation" />
-      <Drawer.Screen name="ThirdAnimation" />
+      <Drawer.Screen name="AnimationOne" />
+      <Drawer.Screen name="ContextManagement" />
     </Drawer>
   );
 };
