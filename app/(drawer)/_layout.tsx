@@ -27,6 +27,9 @@ const Layout = () => {
     >
       <Drawer.Screen name="AnimationOne" />
       <Drawer.Screen name="ContextManagement" />
+      <Drawer.Screen name="Modals" />
+      <Drawer.Screen name="KeyboardView" />
+      <Drawer.Screen name="Switch" />
     </Drawer>
   );
 };
