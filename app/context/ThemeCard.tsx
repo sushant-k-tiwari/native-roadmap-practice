@@ -29,7 +29,7 @@ function Card({
   return (
     <CardContext.Provider value={{ theme, toggle }}>
       <View
-        className={`rounded-xl p-4 m-4 ${theme === "dark" ? "bg-gray-800" : "bg-white"}`}
+        className={`rounded-xl p-4 m-4 ${theme === "dark" ? "bg-[#000814]" : "bg-[#E5E5E5]"}`}
       >
         {children}
       </View>
@@ -42,7 +42,7 @@ function CardHeader({ children }: React.PropsWithChildren) {
   return (
     <Text
       className={`text-lg font-bold mb-2 ${
-        theme === "dark" ? "text-white" : "text-black"
+        theme === "dark" ? "text-[#E5E5E5]" : "text-[#000814]"
       }`}
     >
       {children}
