@@ -30,6 +30,7 @@ const Layout = () => {
       <Drawer.Screen name="Modals" />
       <Drawer.Screen name="KeyboardView" />
       <Drawer.Screen name="Switch" />
+      <Drawer.Screen name="Permissions" />
     </Drawer>
   );
 };
